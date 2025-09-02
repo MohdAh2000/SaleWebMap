@@ -1,0 +1,209 @@
+/* إعدادات عامة */
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background: #f2f2f2;
+  direction: rtl;
+}
+
+header {
+  position: relative;
+  background: #1b1b1b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 5px;
+
+}
+
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+header .logo img {
+  width: 65px;
+}
+
+header h2 {
+  margin: 0;
+  font-size: 27px;
+}
+
+header .subtitle {
+  margin: -6px 0 0;
+  font-size: 16px;
+}
+
+/* الخريطة يجب أن يكون لها ارتفاع واضح */
+#map {
+  width: 100%;
+  height: calc(100vh - 100px); /* عدل الرقم لو ارتفاع الهيدر تغير */
+  position: relative; /* حتى يتم تموضع التابات absolute داخله */
+  background: #eaeaea; /* لون احتياطي قبل تحميل الخرائط */
+}
+
+/* شريط التابات العلوي */
+.tabs-row {
+  position: absolute;
+  top: 10px;
+  left: 80px;        /* استخدم right:15px لو بدكها في يمين الشاشة */
+  display: flex;
+  gap: 10px;
+  z-index: 1000;     /* مهم: فوق الخريطة */
+}
+
+/* الأزرار */
+.tabs-row .tab {
+  padding: 10px 16px;
+  border: none;
+  background: #f12626;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.2s;
+}
+
+.tabs-row .tab:hover {
+  background: #f12626bb;
+}
+
+/* قوائم الاختيار */
+.dropdown-select {
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: #000000;
+    color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  
+}
+
+/* القائمة المنسدلة الإضافية */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 44px;
+  left: 0; /* تظهر بمحاذاة الزر */
+  list-style: none;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 6px 0;
+  display: none;           /* مخفية افتراضياً */
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 1001;          /* فوق الأزرار */
+}
+
+.dropdown-menu li {
+  padding: 8px 12px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f5f5f5;
+}
+
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #6b6b1f;  /* لون مشابه للصورة */
+  color: white;
+  font-size: 17px;
+  font-weight: 800;
+  border: none;
+  border-radius: 10px;
+  padding: 4px 9px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+.login-btn:hover {
+  background-color: #565617; /* لون أغمق عند التمرير */
+}
+
+
+
+.login-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;   /* ينقله لليسار */
+}
+
+
+/* شكل الأزرار ضمن شريط Leaflet */
+.measure-control a {
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background: #fff;
+  border: 2px solid #666;
+  border-radius: 8px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.measure-control a:hover {
+  background: #f0f0f0;
+}
+
+.measuring-cursor {
+  cursor: crosshair !important;
+}
+
+/* بطاقة المسافة */
+.leaflet-tooltip.measure-label {
+  background: #ffffff;
+  color: #111;
+  border: 1px solid #999;
+  border-radius: 6px;
+  font-weight: 700;
+  padding: 4px 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.locate-control a {
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background: #fff;
+  border: 2px solid #666;
+  border-radius: 8px;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+
+.locate-control a:hover {
+  background: #f0f0f0;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "real-estate-map-app",
+  "version": "2.0.0",
+  "description": "تطبيق عقاري يعرض المنازل على الخريطة باستخدام Supabase",
+  "main": "Index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'No build step needed for static site'",
+    "deploy": "echo 'Deploy to Supabase Storage or GitHub Pages'"
+  },
+  "keywords": [
+    "real-estate",
+    "map",
+    "supabase",
+    "postgresql",
+    "authentication",
+    "storage",
+    "leaflet",
+    "geojson"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المنازل القابلة للإيجار</title>
+
+  <!-- CSS الرئيسي -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Leaflet Draw CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css" />
+
+  <!-- Leaflet Draw JS -->
+  <script src="https://unpkg.com/leaflet-draw/dist/leaflet.draw.js"></script>
+
+
+  <!-- ملف السكربت الخاص بنا (defer حتى يعمل بعد تحميل الصفحة) -->
+  <script src="script.js" defer></script>
+
+
+</head>
+
+<body>
+  <!-- الهيدر -->
+  <header>
+    <div class="logo">
+      <img src="https://icons.iconarchive.com/icons/iconshock/vista-general/128/house-icon.png" alt="شعار" />
+      <h2>الملكيات القابلة للايجار - المحافظة الوسطى</h2>
+
+      <img src="https://icons.iconarchive.com/icons/iconshock/vista-general/128/house-icon.png" alt="شعار" />
+
+
+    </div>
+
+    <h6 class="subtitle">موقع بسيط يهدف لتسهيل عملية العثور على مكان للإيجار</h6>
+    <button class="login-btn">
+
+      <img src="https://cdn-icons-png.freepik.com/512/4661/4661334.png" alt="user icon">
+      <span>تسجيل الدخول</span>
+    </button>
+  </header>
+
+  <!-- الخريطة (عنصر واحد فقط بهذا المعرف) -->
+  <div id="map">
+    <!-- شريط التابات العلوي -->
+    <div class="tabs-row">
+      <button class="tab" id="btn-add">إضافة مكان +</button>
+
+
+      <!-- فلاتر سريعة -->
+      <select id="filter-type" class="dropdown-select">
+        <option value="">الكل (النوع)</option>
+        <option value="منزل">منزل</option>
+        <option value="حاصل">حاصل</option>
+        <option value="ارض">أرض</option>
+      </select>
+
+      <select id="filter-region" class="dropdown-select">
+        <option value="">الكل (المنطقة)</option>
+        <option value="البريح">البريح</option>
+        <option value="النصيرات">النصيرات</option>
+        <option value="المغازي">المغازي</option>
+        <option value="الزوايدة">الزوايدة</option>
+        <option value="المصدر">المصدر</option>
+        <option value="دير البلح">دير البلح</option>
+      </select>
+
+
+    </div>
+  </div>
+</body>
+
+</html>
